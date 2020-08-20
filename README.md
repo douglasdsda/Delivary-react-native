@@ -1,11 +1,12 @@
-<h1>
-  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar2_dzcjqoofwF.PNG">
 
-  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar_b2KY1Yfv5K.PNG">
+<div style="display: flex; flex-direction: 'row';">
+  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar2_dzcjqoofwF.PNG"  width="180">
 
-  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar3_mL-uwvrBk0.PNG">
+  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar_b2KY1Yfv5K.PNG"  width="180">
 
-</h1>
+  <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar3_mL-uwvrBk0.PNG"  width="180">
+</div>
+
 
 
 <h1>
