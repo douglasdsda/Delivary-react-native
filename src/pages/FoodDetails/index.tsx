@@ -10,6 +10,7 @@ import { Image, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import formatValue from '../../utils/formatValue';
 
 import api from '../../services/api';
@@ -200,6 +201,7 @@ const FoodDetails: React.FC = () => {
 
   return (
     <Container>
+      <SafeAreaView />
       <Header />
 
       <ScrollContainer>

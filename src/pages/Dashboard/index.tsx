@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Image, ScrollView } from 'react-native';
+import { Image, ScrollView, SafeAreaView } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Feather';
 import { useNavigation } from '@react-navigation/native';
@@ -117,6 +117,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <Container>
+      <SafeAreaView />
       <Header>
         <Image source={Logo} />
         <Icon
