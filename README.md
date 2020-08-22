@@ -1,4 +1,13 @@
 
+# 📕 Indice
+
+- [Apresentação](#-apresentação)
+- [Sobre](#-sobre)
+- [Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [Como Baixar o projeto](#-como-baixar-o-projeto)
+
+# 🚀 Apresentação
+
 <div style="display: flex; flex-direction: 'row';">
   <img src="https://ik.imagekit.io/srlnjxcdtw/Capturar_QPwJP9zn3.PNG"  width="180">
 
@@ -20,11 +29,7 @@
 
 
 
-# 📕 Indice
 
-- [Sobre](#-sobre)
-- [Tecnologias utilizadas](#-tecnologias-utilizadas)
-- [Como Baixar o projeto](#-como-baixar-o-projeto)
 
 ## 🧰 Sobre
 
