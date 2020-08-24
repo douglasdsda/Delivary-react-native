@@ -4,6 +4,7 @@
 - [Sobre](#-sobre)
 - [Tecnologias utilizadas](#-tecnologias-utilizadas)
 - [Como Baixar o projeto](#-como-baixar-o-projeto)
+- [Testes](#-testes)
 
 # 🚀 Apresentação
 
@@ -36,6 +37,7 @@ O projeto foi desenvolvido as seguintes tecnologias
 - [React Native](https://reactnative.dev)
 - [Axios](https://github.com/axios/axios)
 - [Styled Components](https://styled-components.com)
+- [jest-native](https://github.com/testing-library/jest-native)
 
 ---
 
@@ -69,6 +71,16 @@ $ yarn android / yarn ios
 
 # Iniciar ios
 $ pod install && yarn ios
+
+```
+
+---
+
+# Testes
+
+```bash
+# como excutar os testes:
+$ yarn test
 
 ```
 
