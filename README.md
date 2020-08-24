@@ -30,7 +30,7 @@ Projeto **Go Restaurant** foi criado dentro do curso Bootcamp GoStack com intuit
 
 ---
 
-## 🚀 Tecnologias utilizadas
+## 📚 Tecnologias utilizadas
 
 O projeto foi desenvolvido as seguintes tecnologias
 
@@ -76,7 +76,7 @@ $ pod install && yarn ios
 
 ---
 
-# Testes
+# ⚡ Testes
 
 ```bash
 # como executar os testes:
