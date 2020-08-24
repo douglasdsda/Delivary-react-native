@@ -79,7 +79,7 @@ $ pod install && yarn ios
 # Testes
 
 ```bash
-# como excutar os testes:
+# como executar os testes:
 $ yarn test
 
 ```
