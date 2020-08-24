@@ -1,4 +1,3 @@
-
 # 📕 Indice
 
 - [Apresentação](#-apresentação)
@@ -19,23 +18,16 @@
 
 </div>
 
-
-
 <h1>
   <img src="public/teste1.gif">
 
 </h1>
 
-
-
-
-
-
 ## 🧰 Sobre
 
 Projeto **Go Restaurant** foi criado dentro do curso Bootcamp GoStack com intuito de colocarmos em prática todo contéudo estudado durante o curso.
 
-___
+---
 
 ## 🚀 Tecnologias utilizadas
 
@@ -45,7 +37,7 @@ O projeto foi desenvolvido as seguintes tecnologias
 - [Axios](https://github.com/axios/axios)
 - [Styled Components](https://styled-components.com)
 
-___
+---
 
 ## 💻 Como Baixar o projeto
 
@@ -79,6 +71,7 @@ $ yarn android / yarn ios
 $ pod install && yarn ios
 
 ```
-___
-Desenvolvido por Douglas Souza
 
+---
+
+Desenvolvido por Douglas Souza

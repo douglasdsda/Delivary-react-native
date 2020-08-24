@@ -10,7 +10,6 @@ import { Image, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import formatValue from '../../utils/formatValue';
 
 import api from '../../services/api';
@@ -93,6 +92,17 @@ const FoodDetails: React.FC = () => {
     loadFood();
   }, [routeParams, food.price]);
 
+  useEffect(() => {
+    api
+      .get<Food[]>(`favorites/${routeParams.id}`)
+      .then(response => {
+        setIsFavorite(true);
+      })
+      .catch(err => {
+        setIsFavorite(false);
+      });
+  }, [routeParams.id]);
+
   function handleIncrementExtra(id: number): void {
     // Increment extra quantity
 
@@ -129,29 +139,17 @@ const FoodDetails: React.FC = () => {
     }
   }
 
-  const toggleFavorite = useCallback(() => {
+  const toggleFavorite = useCallback(async () => {
     // Toggle if food is favorite or not
     if (isFavorite) {
       setIsFavorite(false);
+      api.delete(`favorites/${food.id}`);
     } else {
       setIsFavorite(true);
 
-      if (isFavorite) {
-        const loadFavorite = async (): Promise<void> => {
-          const favoriteFood = await api.get('foods', {
-            params: {
-              id: food.id,
-            },
-          });
-
-          await api.post('favorites', {
-            favoriteFood,
-          });
-        };
-        loadFavorite();
-      } else {
-        api.delete(`foods/${food.id}`);
-      }
+      await api.post('favorites', {
+        ...food,
+      });
     }
   }, [isFavorite, food]);
 
@@ -166,7 +164,10 @@ const FoodDetails: React.FC = () => {
 
   async function handleFinishOrder(): Promise<void> {
     // Finish the order and save on the API
-    const { category } = await api.get('foods', { params: { id: food.id } });
+
+    const { data } = await api.get('foods', { params: { id: food.id } });
+
+    const category = data[0];
 
     await api.post('orders', {
       product_id: food.id,
@@ -177,13 +178,16 @@ const FoodDetails: React.FC = () => {
       thumbnail_url: food.image_url,
       extras,
     });
+
+    Alert.alert('Cadastro realizado com sucesso');
+
+    navigation.navigate('DashboardStack');
   }
 
   // Calculate the correct icon name
-  const favoriteIconName = useMemo(
-    () => (isFavorite ? 'favorite' : 'favorite-border'),
-    [isFavorite],
-  );
+  const favoriteIconName = useMemo(() => {
+    return isFavorite ? 'favorite' : 'favorite-border';
+  }, [isFavorite]);
 
   useLayoutEffect(() => {
     // Add the favorite icon on the right of the header bar
@@ -201,7 +205,6 @@ const FoodDetails: React.FC = () => {
 
   return (
     <Container>
-      <SafeAreaView />
       <Header />
 
       <ScrollContainer>

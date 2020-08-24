@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+
 import TabRoutes from './tab.routes';
 
 import Home from '../pages/Home';
