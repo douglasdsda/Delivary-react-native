@@ -46,13 +46,6 @@ const Favorites: React.FC = () => {
     loadFavorites();
   }, []);
 
-  async function handleNavigate(id: number): Promise<void> {
-    // Navigate do ProductDetails page
-    navigation.navigate(`FoodDetails`, {
-      id,
-    });
-  }
-
   return (
     <Container>
       <Header>
@@ -64,7 +57,7 @@ const Favorites: React.FC = () => {
           data={favorites}
           keyExtractor={item => String(item.id)}
           renderItem={({ item }) => (
-            <Food onPress={() => handleNavigate(item.id)} activeOpacity={0.6}>
+            <Food activeOpacity={0.6}>
               <FoodImageContainer>
                 <Image
                   style={{ width: 88, height: 88 }}
